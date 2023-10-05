@@ -1,0 +1,34 @@
+public class PrinterApp {
+
+    public static void main(String[] args) {
+        System.out.println("Printer App");
+        System.out.println("This app is made by:");
+
+        // Declare and assign a string variable
+        String creator = "Your Name";
+        System.out.print(" " + creator); // Print creator on the same line
+
+        // Declare two numeric variables
+        int number1 = 5;
+        int number2 = 2;
+
+        // Print the values of number1 and number2
+        // System.out.println("The value of number1 is " + number1);
+        System.out.println("The value of number1 is " + number1); // Uncomment this line after printing number1
+
+        System.out.println("The value of number2 is " + number2);
+
+        // Declare and calculate the multiplication
+        int multiplication = number1 * number2;
+        System.out.println(number1 + " * " + number2 + " = " + multiplication);
+
+        // Declare and calculate addition, division, and subtraction
+        int addition = number1 + number2;
+        double division = (double) number1 / number2; // Use double for correct division
+        int subtraction = number1 - number2;
+
+        System.out.println(number1 + " + " + number2 + " = " + addition);
+        System.out.println(number1 + " / " + number2 + " = " + division);
+        System.out.println(number1 + " - " + number2 + " = " + subtraction);
+    }
+}
