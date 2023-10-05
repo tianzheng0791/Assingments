@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class GuessingGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String correctName = "Emma";
+        int guessCount = 0;
+
+        System.out.println("Guess my name:");
+        String userGuess = scanner.nextLine();
+        guessCount++;
+
+        while (!userGuess.equalsIgnoreCase(correctName)) {
+            System.out.println("Try again:");
+            userGuess = scanner.nextLine();
+            guessCount++;
+
+            if (userGuess.equalsIgnoreCase("quit")) {
+                System.out.println("Game over. The correct answer was " + correctName);
+                break;
+            }
+
+            if (userGuess.length() <= guessCount) {
+                String partialName = correctName.substring(0, guessCount);
+                System.out.println("Hint: " + partialName);
+            }
+        }
+
+        if (userGuess.equalsIgnoreCase(correctName)) {
+            System.out.println("Congratulations, you got it right!");
+        }
+
+        System.out.println("You guessed " + guessCount + " times.");
+        scanner.close();
+    }
+}
